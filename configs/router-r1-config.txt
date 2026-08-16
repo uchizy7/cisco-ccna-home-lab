@@ -1,0 +1,32 @@
+!
+! Router R1 (Edge/ISP) Configuration
+! BGP AS 64001
+!
+version 15.2
+!
+hostname R1
+!
+ip routing
+!
+interface Ethernet0/0
+ description Link to Core Router (R2)
+ ip address 203.0.113.1 255.255.255.0
+ no shutdown
+!
+interface Ethernet0/1
+ description Link to ISP (Simulation)
+ ip address 198.51.100.2 255.255.255.0
+ no shutdown
+!
+router bgp 64001
+ bgp log-neighbor-changes
+ neighbor 10.0.0.1 remote-as 64002
+ !
+ address-family ipv4
+  network 203.0.113.0 mask 255.255.255.0
+  neighbor 10.0.0.1 activate
+ exit-address-family
+!
+ip route 0.0.0.0 0.0.0.0 198.51.100.1
+!
+end
