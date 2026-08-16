@@ -1,5 +1,3 @@
-# cisco-ccna-home-lab
-Cisco CCNA Routing &amp; Switching home lab with detailed configurations and troubleshooting guides
 # Cisco CCNA Routing & Switching Home Lab
 
 ## Overview
@@ -10,8 +8,6 @@ This repository documents my hands-on Cisco CCNA Routing & Switching studies. It
 ---
 
 ## Lab Topology
-
-
 ┌─────────────────────────────────┐
                 │  Router R1 (Edge/ISP)           │
                 │  IP: 203.0.113.1 /24            │
@@ -122,8 +118,7 @@ VLANs │          VLANs │         VLANs │
 
 ### Router R1 (Edge) - Basic Configuration
 
-
-
+### Router R2 (Core) - OSPF Configuration
 ---
 
 ## How to Use This Lab
